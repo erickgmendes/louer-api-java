@@ -1,0 +1,22 @@
+- Cada objeto terá uma tela para gerenciamento (Grid) com objetos de ação:
+  - Caixa de texto com um Botão "Pesquisar" um objeto por algum dado específico;
+  - Botão "Abrir" objeto selecionado, quando houver;
+    - Esse comportamento irá abrir a tela de Edição do Objeto
+  - Botão "Imprimir" para gerr relatório com o resultado da Grid;
+
+- Cada objeto terá uma tela de "Edição", onde o mesmo poderá ser modificado pelos botões:
+  - Botão "Salvar" irá gravar os dados informados, mostrar uma tela de "Sucesso" e voltará para a tela anterior;
+  - Botão "Cancelar" não irá gravar os dados modificados e voltará para a tela anterior;
+
+- Objetos do sistema:
+  - Clientes;
+    - lista de e-mails;
+    - lista de telefones;
+    - lista de referências (pessoas de contato);
+  - Contratos;
+  - Equipamentos;
+  - Locação
+    - Itens de Locação
+  - Log do sistema
+  - Vigências;
+  - Usuários;
