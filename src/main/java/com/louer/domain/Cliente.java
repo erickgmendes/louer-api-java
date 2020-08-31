@@ -1,6 +1,7 @@
 package com.louer.domain;
 
 import com.louer.domain.enums.TipoCliente;
+import com.louer.domain.enums.TipoPessoa;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -21,14 +22,17 @@ public class Cliente implements Serializable {
     @Column
     private TipoCliente tipoCliente;
 
-    @Column(unique = true)
+    @Column
     private String razaoSocial;
 
     @Column(unique = true)
-    private String nomeFantasia;
+    private String nome;
 
     @Column(unique = true, nullable = false)
-    private String cpf;
+    private TipoPessoa tipoPessoa;
+
+    @Column(unique = true, nullable = false)
+    private String cpfCnpj;
 
     @Column(unique = true, nullable = false)
     private String inscricao;
@@ -98,20 +102,12 @@ public class Cliente implements Serializable {
         this.razaoSocial = razaoSocial;
     }
 
-    public String getNomeFantasia() {
-        return nomeFantasia;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeFantasia(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getInscricao() {
@@ -208,5 +204,21 @@ public class Cliente implements Serializable {
 
     public void setClienteReferencias(Set<ClienteReferencia> clienteReferencias) {
         this.clienteReferencias = clienteReferencias;
+    }
+
+    public TipoPessoa getTipoPessoa() {
+        return tipoPessoa;
+    }
+
+    public void setTipoPessoa(TipoPessoa tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
+    }
+
+    public String getCpfCnpj() {
+        return cpfCnpj;
+    }
+
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
     }
 }
